@@ -18,7 +18,7 @@
     margin: 0 15px;
     border: 2px solid transparent;
     text-decoration: none;
-    transition: color 0.3s, border-color 0.3s;
+    transition: color 1s, border-color 1s;
 }
 
 .btn-nav:hover {
@@ -30,7 +30,27 @@
 .btn-nav.active {
     color: #101255;
     border-bottom: 2px solid #FCC200;
+    transition: all 0.3s ease;
 }
+
+.toggle-section {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.toggle-section.active-section {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+    transition: all 1s ease;
+}
+
 
 .mission-vision{
     background: linear-gradient(to bottom, #5757B5, #967300);
@@ -115,6 +135,412 @@
     line-height: 117%;
     letter-spacing: 0%;
     vertical-align: middle;
+}
+
+h2.leadership-title{
+    font-family: 'Sansita One';
+    color: #26264F;
+    font-size: 35px;
+    font-weight: bold;
+}
+/* Leadership Section */
+.leadership-title {
+    font-family: 'Sansita One', sans-serif;
+    font-weight: bold;
+    color: #26264F;
+    font-size: 35px;
+}
+
+.leadership-subtitle {
+    font-size: 16px;
+    color: #4F4F4F;
+}
+
+.leader-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.leader-img-wrapper {
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 2;
+    margin-right: -25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leader-img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.leader-card {
+    flex: 1;
+    position: relative;
+    background: linear-gradient(to right, #FFFFFF, #101255);
+    padding: 20px 25px;
+    padding-left: 60px;
+    border-radius: 0 15px 15px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.leader-card:hover {
+    border: 2px solid #007bff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.leader-name {
+    font-family: 'Sansita One', sans-serif;
+    font-size: 16px;
+    color: #191970;
+    margin: 0;
+}
+
+.leader-role {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    color: #DF1A22;
+    margin: 0;
+    margin-top: 2px;
+}
+
+.leader-arrow {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #FFD700;
+}
+
+.btn-member-team{
+    background-color: #FFFFFF;
+    border: 2px solid #DF1A22;
+    color: #101255;
+    padding: 14px 64px;
+    font-weight: 500;
+}
+
+/************   Leadership    **********/
+.leader-card-box {
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.leader-card-box:hover {
+    transform: translateY(-5px);
+}
+
+.leader-img-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.leader-img-top {
+    width: 88%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.leader-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 40px;
+}
+
+.leader-name-tag {
+    background-color: #101255;
+    color: white;
+    font-weight: bold;
+    font-family: 'Sansita One';
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 0 0 25px 25px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2;
+}
+.body-padding{
+    padding: 0 20px;
+    border: 1px solid #101255;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+}
+
+.leader-card-body {
+    padding: 0px 20px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    min-height: 300px;
+    border-top: none;
+}
+
+.cards-padding{
+    padding: 20px;
+}
+
+.leader-role-title {
+    color: #DF1A22;
+    font-weight: 700;
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.leader-name-tag strong{
+    font-size: 28px;
+}
+
+.leader-description {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 56px;
+}
+
+.read-more-btn {
+    border: 1.5px solid #DF1A22;
+    padding: 6px 20px;
+    border-radius: 6px;
+    color: #101255;
+    background-color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 5vh 0 0.5vh 0;
+}
+
+.read-more-btn:hover {
+    background-color: #DF1A22;
+    color: white;
+}
+
+/* calendar */
+.election-title {
+    font-family: 'Sansita One';
+    font-size: 35px;
+    color: #26264F;
+    font-weight: bold;
+}
+
+.italic-span {
+    font-style: italic;
+}
+
+.check-icon {
+    height: 30px;
+    margin-right: 15px;
+}
+
+.check-text {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.not-member {
+    font-size: 16px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #26264F;
+}
+
+.join-now {
+    color: #26264F;
+    text-decoration: underline;
+}
+
+.calendar-wrapper {
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.calendar-header {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-family: 'Sansita One';
+}
+
+.calendar-arrow {
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+}
+
+.calendar-table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    font-family: 'Arial';
+    font-size: 15px;
+}
+
+.calendar-table th {
+    background: #fff;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.calendar-table td {
+    padding: 14px 10px;
+    border: 1px solid #e0e0e0;
+    color: #333;
+}
+
+.today {
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.done {
+    background-color: #2ECC40 !important;
+    color: white;
+    font-weight: bold;
+}
+
+.soon {
+    color: red;
+    font-weight: bold;
+}
+
+.special {
+    background-color: #B71C1C;
+    color: white !important;
+    font-size: 13px;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.legend-box.done {
+    background-color: #2ECC40;
+}
+
+.legend-box.soon {
+    background-color: red;
+}
+
+
+.elections-content {
+    font-family: 'Sansita One', sans-serif;
+    border-radius: 10px;
+    padding: 48px 20px;
+}
+
+.elections-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #26264F;
+}
+
+.elections-content ul {
+    list-style-type: none; /* Remove default list bullets */
+    padding-left: 0;
+}
+
+.elections-content ul li {
+    display: flex;
+    align-items: center; /* Align check icon and text */
+    margin: 15px 0px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.elections-content .btn {
+    background-color: #26264F;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.elections-content .btn:hover {
+    background-color: #d43d00; /* Darker red for hover effect */
+}
+
+.btn-member{
+    color: #4A4A82;
+    text-decoration: none;
+}
+
+.calendar-legend .legend-dot {
+    width: 40px;
+    height: 10px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.calendar-legend .legend-label {
+    color: #4F4F4F;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contact-prompt {
+    font-family: 'Sansita One', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #26264F;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-bold {
+    font-weight: 900;
+    color: black;
+    margin-left: 5px;
+}
+
+.contact-arrow {
+    background-color: #DF1A22;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-left: 6px;
+    font-size: 14px;
 }
 
 /* Responsive */
