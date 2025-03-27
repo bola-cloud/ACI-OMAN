@@ -1,0 +1,418 @@
+/* General styles for Hero Section */
+.hero-contact-section {
+    width: 100%;
+    height: 667px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Wrapper */
+.hero-contact-wrapper {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px; /* To add some space on the right side */
+    z-index: 1;
+}
+
+/* Overlay on Hero */
+.hero-contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* 20% black overlay as per Figma */
+    z-index: 0;
+}
+
+/* Content Styling */
+.hero-contact-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    width: 100%;
+    font-family: 'Sansita One';
+    margin: 0 120px;
+    text-align: left; /* Align text to the left */
+}
+
+/* Subtitle Styling */
+.contact-subtitle {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+/* Main Text Styling */
+.contact-main {
+    font-weight: bold;
+    color: #DF1A22;
+    font-size: 55px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .contact-subtitle {
+        font-size: 30px;
+    }
+
+    .contact-main {
+        font-size: 45px;
+    }
+
+    .hero-contact-content {
+        margin: 0 40px; /* Adjust margin on larger tablets/desktops */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-contact-section {
+        height: 500px; /* Reduce height for smaller screens */
+    }
+
+    .contact-subtitle {
+        font-size: 24px;
+    }
+
+    .contact-main {
+        font-size: 36px;
+    }
+
+    .hero-contact-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-contact-content {
+        margin: 0 20px; /* More margin for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-contact-section {
+        height: 400px; /* Further reduce height for very small screens */
+    }
+
+    .contact-subtitle {
+        font-size: 20px;
+    }
+
+    .contact-main {
+        font-size: 28px;
+    }
+
+    .hero-contact-content {
+        margin: 0 10px; /* Smaller margins on very small screens */
+    }
+}
+
+
+
+
+
+/* Get In Touch Section Styling */
+.get-in-touch-section {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.contact-info-card {
+    border-radius: 40px; /* Border radius for rounded corners */
+    padding: 57px 105px ; /* Padding as per the design */
+    position: relative;
+    margin: 0 auto; /* Center the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Add space between elements */
+    box-shadow: inset -35.5px -35.5px 35.5px rgba(255, 255, 255, 0.8), inset 35.5px 35.5px 35.5px rgb(165 165 165 / 15%); /* Inner shadows */
+}
+
+/* Overlay effect on the background */
+.contact-info-card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* Overlay effect */
+    border-radius: 40px;
+    z-index: -1; /* Place behind content */
+}
+
+.contact-title {
+    font-family: 'Sansita One';
+    font-weight: 600;
+    font-size: 36.73px;
+    line-height: 100%;
+    background: linear-gradient(to right, #26264F, #5757B5); /* Gradient from dark blue to purple */
+    -webkit-background-clip: text; /* Clip the background to text */
+    color: transparent; /* Make the text color transparent so the background is visible */
+}
+.contact-getintouch{
+    padding: 12px;
+}
+
+.contact-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+    margin-top: 25px;
+}
+
+.contact-details {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #4F4F4F;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px 0px;
+    border-top: 1px solid transparent; /* Set transparent border */
+    border-bottom: 1px solid transparent; /* Set transparent border */
+    border-image: linear-gradient(to right, #26264F, #FCC200) 1; /* Gradient border */
+}
+
+.contact-details li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    list-style-type: none; /* Removes the default list styling */
+}
+.contact-details li i {
+    font-size: 44px;
+    color: #F6C900;
+    margin-right: 15px; /* Space between icon and title */
+}
+.contact-details li span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4F4F4F;
+    display: block; /* Makes the title and detail stack vertically */
+}
+.contact-details li .details {
+    font-size: 16px;
+    color: #4F4F4F;
+}
+
+
+.follow-us-section {
+    margin-top: 30px; /* Space at the top */
+}
+
+.follow-us-title {
+    font-family: 'Sansita One';
+    font-size: 24px;
+    font-weight: bold;
+    color: #26264F; /* Dark color for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 27px; /* Space between the icons */
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 5px 5px 0 5px;
+    border: 1px solid #4A4A82; /* Border around the icons */
+    border-radius: 9px; /* Circular icons */
+    color: #FCC200; /* Dark color for icons */
+    background-color: white; /* White background for the icons */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.social-icon:hover {
+    background-color: #FCC200; /* Yellow background on hover */
+    color: white; /* White color for icons when hovered */
+    border-color: #FCC200; /* Yellow border when hovered */
+}
+
+.social-icon i {
+    font-size: 24px;
+}
+
+
+/* Contact Form Card */
+.contact-form-card {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #FCC200;
+}
+
+.form-title {
+    font-size: 36.73px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Sansita One';
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #26264F, #5757B5); /* Gradient from dark blue to purple */
+    -webkit-background-clip: text; /* Clip the background to text */
+    color: transparent; /* Make the text color transparent so the background is visible */
+}
+
+/* Style for form labels */
+.contact-form label {
+    color: #4A4A82; /* Apply color to the labels */
+    font-weight: bold;
+    margin: 5px 5px 11px 5px;
+}
+
+/* Style for form inputs and textarea */
+.contact-form .form-control {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Add drop shadow effect */
+    border: 1px solid #D9D9D9; /* Set a light border for inputs */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow */
+    background: #26264F1A;
+}
+
+/* Input and textarea focus state with increased shadow */
+.contact-form .form-control:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Focused shadow */
+    border-color: #4A4A82; /* Change border color on focus */
+    outline: none; /* Remove default outline on focus */
+}
+
+/* Style for the submit button */
+.contact-form .btn-danger {
+    background-color: #DF1A22;
+    color: white;
+    border: none;
+    padding: 15px 70px;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-danger:hover {
+    background-color: #D43D00; /* Darker shade on hover */
+}
+
+
+.form-description {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 12px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.contact-form{
+    padding: 12px 30px;
+}
+
+.form-control {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.btn-danger {
+    background-color: #DF1A22;
+    color: white;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #d43d00;
+}
+
+/* Membership Footer Section */
+.membership-footer {
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.contact-membership{
+    width: 60%;
+    padding: 30px 50px;
+    border-radius: 40px;
+    box-shadow: inset -35.5px -35.5px 35.5px rgba(255, 255, 255, 0.8), inset 35.5px 35.5px 35.5px rgb(165 165 165 / 15%);
+}
+
+.membership-footer p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.membership-footer .btn-primary {
+    background-color: #26264F;
+    color: white;
+    padding: 17px 75px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+}
+
+.membership-footer .btn-primary:hover {
+    background-color: #d43d00;
+}
+
+.map-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.map-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #26264F;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contact-info-card, .contact-form-card {
+        padding: 10px;
+    }
+
+    .contact-title {
+        font-size: 20px;
+    }
+
+    .contact-text {
+        font-size: 14px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .form-description {
+        font-size: 14px;
+    }
+    .get-in-touch-section {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .contact-membership{
+        width: 100%;
+        padding: 30px 50px;
+    }
+}

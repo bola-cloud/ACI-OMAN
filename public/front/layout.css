@@ -1,0 +1,430 @@
+/* Apply Poppins font to the entire body */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-content{
+    background: white;
+}
+
+
+
+
+/* Top Part styles */
+.top-bar {
+    background: white;
+    padding: 10px 0;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    color: #2E2652;
+}
+
+.navbar {
+    /* background-color: #2E2652; */
+    background-color:#3c3c61;
+    padding: 10px 0;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    padding: 10px 15px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #FFC107;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.search-bar input {
+    height: 100%;
+    padding: 5px;
+    font-size: 14px;
+    width: 100%;
+    border: none;
+}
+
+.search-bar button {
+    height: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    color:  #FFC107;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-join {
+    background: #3c3c61;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    width: 100%; /* Ensure full width of the button */
+}
+
+/* Styling for the language select dropdown */
+.language-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #3c3c61; /* Match the navbar background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+.language-select img {
+    width: 20px;
+    height: auto;
+}
+
+.language-select select {
+    background: none;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    padding-left: 10px; /* Adjust padding to align flag and text */
+    font-size: 14px;
+    width: 120px;
+    padding-right: 25px; /* Make room for the dropdown arrow */
+}
+
+.language-select select:focus {
+    outline: none;
+}
+
+/* Customizing the dropdown */
+.language-select select option {
+    background-color: #fff; /* White background for options */
+    color: #2E2652; /* Dark text */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.language-select select option:hover {
+    background-color: #FFC107; /* Highlight on hover */
+    color: white;
+}
+
+.language-select select::-ms-expand {
+    display: none; /* Hide default dropdown arrow in IE */
+}
+
+/* Styling the dropdown arrow */
+.language-select::after {
+    content: '\f107'; /* FontAwesome down arrow */
+    font-family: 'FontAwesome';
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-item {
+    margin: 0 12px;
+}
+
+/* Adjust margins for nav items */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 10px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        justify-content: center; /* Center phone and email */
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px 15px;
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn-join {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Center the language select */
+    .language-select {
+        margin-bottom: 10px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    /* Center the logo in the responsive view */
+    .top-bar img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        max-height: 60px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* For large screens, align items properly */
+@media (min-width: 769px) {
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact-info {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .top-bar img {
+        max-height: 60px;
+        margin: 0;
+    }
+
+    .col-md-4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Adjust button position on larger screens */
+    .btn-join {
+        width: auto; /* Allow button to take its own width */
+    }
+
+    .language-select {
+        width: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/******************** Footer Styling ****************/
+.footer {
+    position: relative;
+    background-size: cover;
+    color: white;
+    padding: 40px 0;
+    z-index: 1;
+    border-top: 5px solid #26264F; /* Upper border color */
+}
+
+/* Linear Gradient Overlay */
+.footer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #26264F, #4A4A82); /* Gradient with the provided colors */
+    opacity: 0.7; /* Adjust opacity if needed */
+    z-index: -1;
+}
+
+/* First Row (Logo & Subscribe) */
+.footer .first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer .first-row .logo img {
+    max-width: 240px;
+}
+
+.footer .first-row .subscribe {
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%; /* Slim the width to make it like the image */
+}
+
+.footer .first-row .subscribe input {
+    width: 63%; /* Input takes up most of the space */
+    padding: 8px 10px;
+    font-size: 14px; /* Slightly smaller font */
+    border-radius: 0 !important;
+    height: 40px; /* Ensuring same height as the button */
+}
+
+.footer .first-row .subscribe button {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    height: 40px; /* Same height as the input */
+}
+.search-icon-button {
+    padding: 8px 9px;
+    height: 40px;
+    background: #ffffff;
+    border: unset !important;
+    color: #FFC107;
+}
+/* Second Row (About Us, Discover, Contact Us, Join Us) */
+.footer .second-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer .footer-section {
+    width: 23%;
+    padding: 10px;
+}
+
+.footer .footer-section h4 {
+    font-family:'Sansita One';
+    color: #FFC107;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.footer .footer-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer .footer-section ul li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer .footer-section a:hover {
+    color: #FFC107;
+}
+
+.footer .footer-section ul li i {
+    margin-right: 10px;
+    background: unset
+}
+
+.footer .social-icons a {
+    color: #FFC107; /* Icon color */
+    margin: 0 6px;
+    font-size: 20px; /* Icon size */
+    text-decoration: none;
+    border: 2px solid #FFC107; /* Border color */
+    border-radius: 9px; /* Make it circular */
+    padding: 2px 10px; /* Adjust padding for better appearance */
+    display: inline-block; /* Makes the icon an inline-block element to respect width */
+    transition: all 0.3s ease-in-out; /* Add smooth transition effect */
+    text-decoration: none;
+}
+
+.footer .social-icons a:hover {
+    color: #FFC107; /* Icon color on hover */
+    background-color: #26264F; /* Background color on hover */
+    border-color: #FFC107; /* Border color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+    color: white; /* Text color */
+    font-family: 'Sansita One';
+    padding: 10px; /* Add some padding for better visibility */
+    border-top: 3px solid transparent; /* Transparent top border */
+    border-image: linear-gradient(to right, #C1C7CD, #616467) 1; /* Gradient for the top border */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer .first-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .first-row .subscribe {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .footer .second-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .footer-section {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .footer .social-icons {
+        text-align: center;
+    }
+}
+
+/* Specific Style for Desktop View */
+@media (min-width: 769px) {
+    .footer .footer-section {
+        width: 23%;
+    }
+}

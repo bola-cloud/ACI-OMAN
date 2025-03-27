@@ -1,0 +1,626 @@
+section{
+    margin-top: 14vh !important;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 70vh;
+    background-size: cover;
+    position: relative;
+    overflow: hidden; /* Prevents anything from going outside the section */
+}
+
+.hero-blur-layer {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Ensure this stays behind the content */
+}
+
+.hero-content {
+    font-family: 'Sansita One', sans-serif;
+    text-align: center;
+    color: white;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background with some opacity */
+    border-radius: 40px;
+    z-index: 1; /* Ensure it stays above the blurred background */
+    backdrop-filter: blur(10px); /* Applying the background blur */
+    margin-left: 20px;
+
+    /* Applying inner shadow as per the image */
+    box-shadow: inset -35.5px -35.5px 35.5px rgba(255, 255, 255, 0.1); /* Inner shadow effect */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content .btn {
+    background-color: #df1a22;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.hero-content .btn:hover {
+    background-color: #d43d00; /* Darker red for hover effect */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.span-color{
+    color: #26264F;
+}
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-bottom: 20px;
+        width: 80%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content .btn {
+        font-size: 1rem;
+    }
+    .discover-content {
+        text-align: center;
+        padding: 30px 15px !important;
+    }
+
+    .discover-image img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+}
+
+
+/****************** Section for Discover **************/
+.discover-title h3{
+    font-family: 'Sansita One' !important;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #26264F;
+    font-size: 30px !important;
+    font-weight: bolder;
+}
+
+.discover-content {
+    font-family: 'Sansita One', sans-serif;
+    background-color: #D9D9D933; /* Light grey background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px 150px;
+    padding: 48px;
+}
+
+.discover-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #26264F;
+}
+
+.discover-content ul {
+    list-style-type: none; /* Remove default list bullets */
+    padding-left: 0;
+}
+
+.discover-content ul li {
+    display: flex;
+    align-items: center; /* Align check icon and text */
+    margin: 15px 0px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.check-icon {
+    width: 55px;   /* Based on your Figma data */
+    height: 55px;  /* Based on your Figma data */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* To make it circular */
+    border: 2px solid #FF0000; /* Red border */
+    color: white;    /* White color for the checkmark */
+    font-size: 24px; /* Adjust font size to fit the checkmark inside */
+    margin-right: 10px;
+}
+
+.discover-content .btn {
+    background-color: #26264F;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.discover-content .btn:hover {
+    background-color: #d43d00; /* Darker red for hover effect */
+}
+
+/* For the Image */
+.discover-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px 150px;
+}
+
+
+/****************** Section for Services **************/
+.custom-card {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 17px;
+    border-radius: 19px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: white;
+    height: 100%;
+}
+
+.custom-card .custom-icon-container {
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-card h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.custom-card-1 {
+    background: linear-gradient(90deg, #6161C8, #303062); /* Gradient for card 1 */
+}
+
+.custom-card-2 {
+    background: linear-gradient(90deg, #FCC200, #967300); /* Gradient for card 2 */
+}
+
+.custom-card-3 {
+    background: linear-gradient(90deg, #6161C8, #303062); /* Gradient for card 3 */
+}
+
+.custom-card-content {
+    flex: 1;
+}
+
+.custom-card .custom-icon-container i {
+    font-size: 24px;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .custom-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-card .custom-icon-container {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
+/****************** Section for Partners **************/
+.partners-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #C61C1C; /* Red border at the top */
+    border-bottom: 1px solid #C61C1C; /* Red border at the top */
+    margin-top: 50px;
+}
+
+.partner-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-logo img {
+    max-height: 90px;  /* Adjust the height of the logos */
+    object-fit: contain;  /* Ensure the logo is contained without distortion */
+}
+
+@media (max-width: 768px) {
+    .partners-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .partner-logo {
+        margin-bottom: 15px;
+    }
+
+    .partner-logo img {
+        max-height: 140px;
+    }
+}
+
+
+
+/****************** Section for Training **************/
+/* Section Title Styling */
+.section-title {
+    font-family: 'Sansita One';
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #26264F;
+    font-weight: bolder;
+}
+
+/* Unique Card Styling */
+.unique-card {
+    border: none;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+}
+.unique-card .card-img {
+    padding: 7px 15px;
+    position: relative;
+}
+
+.unique-card .card-img-top {
+    max-height: 250px;
+    object-fit: cover;
+}
+
+img.training-logo {
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    height: 34px;
+}
+
+.unique-card .card-body {
+    padding: 20px;
+}
+
+.body-content{
+    padding: 0 15px;
+}
+
+.borded-body{
+    border-top:none !important; ;
+    border: 1.78px solid #06163A;
+    border-radius: 0 0 10px 10px;
+}
+
+.unique-card .card-title {
+    font-size: 14px;
+    font-weight: bold;
+    background: #06163A;
+    color: white;
+    padding: 24px 50px;
+    border-radius: 17.79px 17.79px 35.58px 35.58px;
+}
+
+.unique-card .card-text {
+    font-size: 17px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 45px;
+}
+
+.read-button {
+    /* background-color: #26264F; */
+    color: #26264F;
+    border: 1px solid #DF1A22;
+    border-radius: 6.5px;
+    padding: 5px 25px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #3c3c61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .unique-card {
+        margin-bottom: 20px;
+    }
+
+    .unique-card .card-img-top {
+        height: 200px;
+    }
+
+    .btn-primary {
+        padding: 8px 15px;
+    }
+}
+
+
+
+
+/****************** Section for Events **************/
+/* Top Update Badge */
+.events-section{
+    font-family: 'Sansita One';
+}
+.top-update {
+    background-color: #A0821D;
+    color: white;
+    padding: 9px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Event Title */
+.event-title {
+    font-family: 'Sansita One', sans-serif;
+    font-size: 32px;
+    color: #26264F;
+    font-weight: bold;
+}
+
+/* Event Subtitle */
+.event-subtitle {
+    font-size: 20px;
+    color: #967300;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Event Description */
+.event-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Event Highlights */
+.event-highlights-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #967300;
+    margin-top: 20px;
+}
+
+.event-highlights {
+    list-style-type: none;
+    padding: 7px 17px;
+}
+
+.event-highlights li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.event-highlights li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1rem;
+    color: black; /* Yellow color like in the image */
+}
+
+
+/* Button */
+.btn-event {
+    background-color: #303062;
+    color: white;
+    border: none;
+    padding: 15px 70px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 15px;
+    font-family: 'Poppins';
+    font-weight: 700;
+}
+
+.btn-event:hover {
+    background-color: #3c3c61;
+}
+
+/* Event Image */
+.event-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+/* Feedback Section */
+.feedback-section {
+    margin-top: 20px;
+}
+
+.feedback-title {
+    font-size: 1.3rem;
+    color: #26264F;
+    font-weight: bold;
+}
+
+.feedback {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.feedback-rating {
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    color: #FFC107;
+    font-size: 1.2rem;
+}
+
+.rating-number {
+    font-size: 1rem;
+    color: #333;
+    margin-left: 10px;
+}
+
+.feedback-text {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    line-height: normal;
+}
+
+.feedback-author {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 5px;
+}
+.feedback-author-img{
+    height: 40px;
+    border-radius: 21.15px;
+    width: 40px;
+}
+
+.feedback-author-name{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.feedback-author-title{
+    font-size: 11px;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-details, .feedback-section {
+        text-align: center;
+    }
+
+    .event-image img {
+        max-height: 250px;
+    }
+}
+
+
+/****************** Section for Elections **************/
+/* Elections Section */
+.elections-section {
+    background-color: #fff;
+}
+
+.election-title {
+    font-family: 'Sansita One', sans-serif;
+    font-size: 24px;
+    color: #26264F;
+    font-weight: bold;
+}
+
+.election-description {
+    font-size: 16px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.candidate-card {
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center; /* Ensures that all content inside the card is centered */
+}
+
+.candidate-img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid #3c3c61;
+}
+
+.candidate-name {
+    font-weight: 500;
+    font-size: 16px;
+    color: #26264F;
+    margin-top: 15px;
+}
+
+.vote-buttons .btn {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: white;
+    color: #26264F;
+}
+
+.vote-buttons .btn:hover {
+    background-color: #26264F;
+    color: white;
+}
+
+.bylaws-btn {
+    background-color: #26264F;
+    color: white;
+    padding: 15px 70px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.bylaws-btn:hover {
+    background-color: #3c3c61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .candidate-card {
+        padding: 10px;
+    }
+}

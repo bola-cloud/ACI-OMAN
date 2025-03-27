@@ -1,0 +1,155 @@
+/* About Section */
+.about-section{
+    padding: 0 50px;
+}
+.about-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.btn-nav {
+    background-color: transparent;
+    color: #6F6969;
+    font-family: 'Sansita One', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 15px;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.btn-nav:hover {
+    color:#101255;
+    border-bottom: 2px solid #FCC200;
+}
+
+/* Active Button */
+.btn-nav.active {
+    color: #101255;
+    border-bottom: 2px solid #FCC200;
+}
+
+.mission-vision{
+    background: linear-gradient(to bottom, #5757B5, #967300);
+    padding: 100px;
+    border-radius: 50px;
+}
+
+.mission-img{
+    height: 420px;
+    width: 100%;
+    border-radius: 0 110px;
+}
+.yellow-span{
+    color: #FCC200;
+}
+.vision-title{
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Sansita One';
+    text-align: center;
+}
+.vision-text{
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Sansita One';
+    text-align: center;
+    padding: 20px;
+}
+
+.mission-title{
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Sansita One';
+    text-align: center;
+}
+.mission-text{
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Sansita One';
+    text-align: center;
+    padding: 20px;
+}
+.knowledge-img{
+    height: 700px;
+    width: 100%;
+    border-radius: 0 110px;
+    margin-top: 5vh;
+}
+.knowledge-content {
+    font-family: 'Sansita One', sans-serif;
+    border-radius: 10px;
+    border-radius: 5px 150px;
+    padding: 48px;
+}
+
+.knowledge-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #26264F;
+}
+
+.knowledge-content ul {
+    list-style-type: none; /* Remove default list bullets */
+    padding-left: 0;
+}
+
+.knowledge-content ul li {
+    display: flex;
+    align-items: center; /* Align check icon and text */
+    margin: 15px 0px;
+    font-size: 1.2rem;
+    color: #333;
+}
+.aci-points{
+    font-size: 30px;
+    margin: 30px 50px;
+    font-weight: 500;
+    line-height: 117%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-section{
+        padding: 0 10px;
+    }
+    .mission-vision{
+        padding: 35px;
+    }
+    .mission-img{
+        height: 300px;
+    }
+    .vision-title{
+        font-size: 35px;
+    }
+    .vision-text{
+        font-size: 20px;
+        padding: 0 2px;
+    }
+    .mission-title{
+        font-size: 35px;
+    }
+    .mission-text{
+        font-size: 20px;
+        padding: 0 2px;
+    }
+    .knowledge-content{
+        padding: 0px;
+    }
+    .aci-points{
+        font-size: 18px;
+        margin: 30px 10px;
+    }
+    .knowledge-img {
+        height: 320px;
+    }
+}
